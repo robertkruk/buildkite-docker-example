@@ -18,8 +18,8 @@ steps:
         user: root 
         image: ubuntu
         environment:
-            - "USER"
-            - "PASSWORD"
+            - USER: $USER
+            - PASSWORD: $PASSWORD
 
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
