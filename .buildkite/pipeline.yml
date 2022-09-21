@@ -9,7 +9,10 @@ steps:
   #       user: root
 
   - label: ":hammer: Customer Tests" 
-    command: echo $USER $PASSWORD 
+    command: echo "hi"
+    env:
+      USER: $USER
+      PASSWORD: $PASSWORD
     plugins: 
       docker#v3.5.0: 
         user: root 
