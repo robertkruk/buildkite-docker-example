@@ -12,14 +12,14 @@ steps:
     command: echo "Testing env vars using pre-command"
     env:
       USER: $USER
-      PASSWORD: $SECRET_PASSWORD
+      SECRET_PASSWORD: $SECRET_PASSWORD
     plugins: 
       docker#v3.5.0: 
         user: root 
         image: ubuntu
         environment:
             - USER: $USER
-            - SECRET_PASSWORD: $SECRET_PASSWORD
+            - PASSWORD: $SECRET_PASSWORD
 
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
