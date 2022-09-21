@@ -6,6 +6,7 @@ steps:
       docker#v3.5.0:
         # run: bash
         image: ubuntu
+        user: root
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
