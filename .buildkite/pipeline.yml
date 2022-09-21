@@ -17,7 +17,7 @@ steps:
       docker#v3.5.0: 
         user: root 
         image: ubuntu
-        environment:
+        env:
             - USER: $USER
             - PASSWORD: $PASSWORD
 
