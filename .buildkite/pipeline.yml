@@ -3,8 +3,9 @@ steps:
     command: "./script.sh"
     artifact_paths: "artifacts/*"
     plugins:
-      docker-compose#v3.5.0:
-        run: bash
+      docker#v3.5.0:
+        # run: bash
+        image: ubuntu
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
