@@ -7,7 +7,14 @@ steps:
         run: bash
         image: ubuntu
         user: root
-      
+
+  - label: ":hammer: Customer Tests" 
+    command: echo "hi"
+    plugins: 
+      docker#v3.5.0: 
+        user: root 
+        image: ubuntu
+
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
