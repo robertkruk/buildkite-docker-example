@@ -3,4 +3,4 @@ set -euo pipefail
 
 echo '--- :house_with_garden: Setting up the environment via pre-command hook from .buildkite/hooks/pre-command'
 export USER='PRE-JohnDoe'
-export _PASSWORD='PRE-Welcome@123'
+export SECRET_PASSWORD='PRE-Welcome@123'
