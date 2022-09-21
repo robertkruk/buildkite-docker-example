@@ -14,6 +14,9 @@ steps:
       docker#v3.5.0: 
         user: root 
         image: ubuntu
+        environment:
+            - "MY_SECRET_KEY"
+            - "MY_SPECIAL_BUT_PUBLIC_VALUE=kittens"
 
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
