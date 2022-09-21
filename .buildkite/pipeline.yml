@@ -11,15 +11,15 @@ steps:
   - label: ":hammer: Customer Tests - using pre-command works 🥳" 
     command: echo "Testing env vars using pre-command"
     env:
-      USER: $USER
-      PASSWORD: $PASSWORD
+      USER: $$USER
+      PASSWORD: $$PASSWORD
     plugins: 
       docker#v3.5.0: 
         user: root 
         image: ubuntu
         environment:
-            - USER: $USER
-            - PASSWORD: $PASSWORD
+            - USER: $$USER
+            - PASSWORD: $$PASSWORD
 
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
