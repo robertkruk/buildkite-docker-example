@@ -8,8 +8,8 @@ steps:
   #       image: ubuntu
   #       user: root
 
-  - label: ":hammer: Customer Tests" 
-    command: echo "hi"
+  - label: ":hammer: Customer Tests - using pre-command works 🥳" 
+    command: echo "Testing env vars using pre-command"
     env:
       USER: $USER
       PASSWORD: $PASSWORD
