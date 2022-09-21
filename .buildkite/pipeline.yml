@@ -10,14 +10,14 @@ steps:
 
   - label: ":hammer: Customer Tests" 
     command: echo "hi"
-    env:
-      USER: $USER
-      PASSWORD: $PASSWORD
+    # env:
+    #   USER: $USER
+    #   PASSWORD: $PASSWORD
     plugins: 
       docker#v3.5.0: 
         user: root 
         image: ubuntu
-        env:
+        environment:
             - USER: $USER
             - PASSWORD: $PASSWORD
 
