@@ -1,15 +1,15 @@
 steps:
-  - name: ":hammer: Example Script"
-    command: "./script.sh"
-    artifact_paths: "artifacts/*"
-    plugins:
-      docker#v3.5.0:
-        run: bash
-        image: ubuntu
-        user: root
+  # - name: ":hammer: Example Script"
+  #   command: "./script.sh"
+  #   artifact_paths: "artifacts/*"
+  #   plugins:
+  #     docker#v3.5.0:
+  #       run: bash
+  #       image: ubuntu
+  #       user: root
 
   - label: ":hammer: Customer Tests" 
-    command: echo "hi"
+    command: echo $USER $PASSWORD 
     plugins: 
       docker#v3.5.0: 
         user: root 
