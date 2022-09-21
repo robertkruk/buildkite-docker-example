@@ -12,7 +12,7 @@ steps:
     command: echo "Testing env vars using pre-command"
     env:
       USER: $USER
-      SECRET_PASSWORD: $SECRET_PASSWORD
+      PASSWORD: $SECRET_PASSWORD
     plugins: 
       docker#v3.5.0: 
         user: root 
